@@ -121,7 +121,7 @@ main {
 /* ================= GAMBAR BAB ================= */
 .chapter-img {
     width: 100%;
-    height: 300px; 
+    height: auto; 
     object-fit: cover; 
     border-radius: 12px;
     margin-bottom: 30px;
