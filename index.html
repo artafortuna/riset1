@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Panduan Modern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="onboarding-popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img src="https://via.placeholder.com/600x400/AEE2FF/4A4A4A?text=Selamat+Datang" alt="Onboarding" class="responsive-img">
+            <div class="modal-text">
+                <h2>Selamat Datang!</h2>
+                <p>Panduan ini dirancang khusus agar nyaman dibaca dan mudah dinavigasi.</p>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <button class="nav-btn active-btn" onclick="showPage('pengantar', this)">Pengantar</button>
+            <button class="nav-btn" onclick="showPage('daftar-isi', this)">Daftar Isi</button>
+            <button class="nav-btn" onclick="showPage('bab-1', this)">Bab 1</button>
+            <button class="nav-btn" onclick="showPage('bab-2', this)">Bab 2</button>
+            <button class="nav-btn" onclick="showPage('bab-3', this)">Bab 3</button>
+            <button class="nav-btn" onclick="showPage('bab-4', this)">Bab 4</button>
+            <button class="nav-btn" onclick="showPage('tentang', this)">Tentang</button>
+        </div>
+    </nav>
+
+    <main>
+        
+        <section id="pengantar" class="page active">
+            <div class="page-header">
+                <h1>Pengantar</h1>
+                <div class="divider"></div>
+            </div>
+            <p>Selamat datang di halaman utama. Gunakan menu navigasi di atas untuk berpindah halaman. Desain ini menggunakan palet pastel yang menenangkan dan font Quicksand yang ramah di mata.</p>
+        </section>
+
+        <section id="daftar-isi" class="page">
+            <div class="page-header">
+                <h1>Daftar Isi</h1>
+                <div class="divider"></div>
+            </div>
+            <div class="toc-container">
+                <a href="#" class="toc-card" onclick="showPage('bab-1', document.querySelectorAll('.nav-btn')[2])">
+                    <h3>Bab 1</h3>
+                    <p>Pendahuluan Konsep</p>
+                </a>
+                <a href="#" class="toc-card" onclick="showPage('bab-2', document.querySelectorAll('.nav-btn')[3])">
+                    <h3>Bab 2</h3>
+                    <p>Dasar-dasar Implementasi</p>
+                </a>
+                <a href="#" class="toc-card" onclick="showPage('bab-3', document.querySelectorAll('.nav-btn')[4])">
+                    <h3>Bab 3</h3>
+                    <p>Panduan Lanjutan</p>
+                </a>
+                <a href="#" class="toc-card" onclick="showPage('bab-4', document.querySelectorAll('.nav-btn')[5])">
+                    <h3>Bab 4</h3>
+                    <p>Kesimpulan & Penutup</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="bab-1" class="page">
+            <div class="page-header">
+                <h1>Bab 1: Pendahuluan Konsep</h1>
+                <div class="divider"></div>
+            </div>
+            <img src="https://via.placeholder.com/800x400/FFB7B2/4A4A4A?text=Header+Bab+1" alt="Bab 1" class="chapter-img">
+            <iframe src="https://example.com" title="Konten Bab 1"></iframe>
+        </section>
+
+        <section id="bab-2" class="page">
+            <div class="page-header">
+                <h1>Bab 2: Dasar-dasar Implementasi</h1>
+                <div class="divider"></div>
+            </div>
+            <img src="https://via.placeholder.com/800x400/E2F0CB/4A4A4A?text=Header+Bab+2" alt="Bab 2" class="chapter-img">
+            <iframe src="https://example.com" title="Konten Bab 2"></iframe>
+        </section>
+
+        <section id="bab-3" class="page">
+            <div class="page-header">
+                <h1>Bab 3: Panduan Lanjutan</h1>
+                <div class="divider"></div>
+            </div>
+            <img src="https://via.placeholder.com/800x400/C7CEEA/4A4A4A?text=Header+Bab+3" alt="Bab 3" class="chapter-img">
+            <iframe src="https://example.com" title="Konten Bab 3"></iframe>
+        </section>
+
+        <section id="bab-4" class="page">
+            <div class="page-header">
+                <h1>Bab 4: Kesimpulan dan Penutup</h1>
+                <div class="divider"></div>
+            </div>
+            <img src="https://via.placeholder.com/800x400/FFDAC1/4A4A4A?text=Header+Bab+4" alt="Bab 4" class="chapter-img">
+            <iframe src="https://example.com" title="Konten Bab 4"></iframe>
+        </section>
+
+        <section id="tentang" class="page">
+            <div class="page-header">
+                <h1>Tentang</h1>
+                <div class="divider"></div>
+            </div>
+            <p>Sistem ini dirancang menggunakan HTML, CSS, dan JS murni (Single Page Application) dengan mematuhi prinsip desain UI modern yang bersih dan responsif.</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
