@@ -24,11 +24,11 @@ function showPage(pageId, clickedButton) {
         btn.classList.remove('active-btn');
     });
 
-    // 4. Berikan warna aktif pada tombol yang sedang diklik (jika diklik dari navigasi)
+    // 4. Berikan warna aktif pada tombol yang sedang diklik (jika diklik dari navigasi/daftar isi)
     if (clickedButton) {
         clickedButton.classList.add('active-btn');
     }
 
-    // 5. Scroll ke bagian atas (berguna jika di perangkat mobile)
+    // 5. Scroll ke bagian atas (sangat berguna setelah membaca teks panjang)
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
